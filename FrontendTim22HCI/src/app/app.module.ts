@@ -9,6 +9,11 @@ import { CountryHeaderComponent } from './Components/country-header/country-head
 import { CountryContentComponent } from './Components/country-content/country-content.component';
 import { CountriesContentComponent } from './Components/countries-content/countries-content.component';
 import { CountriesHeaderComponent } from './Components/countries-header/countries-header.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoute: Routes = [
+  {path: 'Home', component: HomeContentComponent}
+]
 
 @NgModule({
   declarations: [
@@ -22,7 +27,8 @@ import { CountriesHeaderComponent } from './Components/countries-header/countrie
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
