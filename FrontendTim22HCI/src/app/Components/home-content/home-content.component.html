@@ -1,9 +1,13 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 <header class="py-5 bg-light border-bottom mb-4">
   <div class="container">
       <div class="text-center my-5">
-          <h1 class="fw-bolder">Welcome to Blog Home!</h1>
-          <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p>
-      </div>
+          <h1 class="fw-bolder" style="font-family: 'Gaegu', cursive;
+
+          ">Welcome to CountryLearn,</h1>
+          <p class="lead mb-0">this is the place where you can discover everything you are interested in about a country!</div>
   </div>
 </header>
 <body>
@@ -19,7 +23,8 @@
           <input id="search" type="text" placeholder="Choose a country" />
         </div>
         <div class="input-field second-wrap">
-          <button class="btn-search" type="button" [routerLink]="['/country']">SEARCH</button>
+          <button class="btn-search" style="background-color: rgb(88, 187, 187);color: black;
+          " type="button" [routerLink]="['/country']" >SEARCH</button>
         </div>
       </div>
       <span class="info">Learn about Flags, Currencies, Capitals...</span>

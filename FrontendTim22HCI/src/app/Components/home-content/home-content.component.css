@@ -6,6 +6,13 @@ html {
     -webkit-text-size-adjust: 100%;
     /* 2 */
   }
+
+  header{
+    background: url("../../../assets/background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  opacity: 0.8;
+}
   
   /* Sections
      ========================================================================== */
@@ -14,6 +21,7 @@ html {
    */
   body {
     margin: 0;
+
   }
   
   /**

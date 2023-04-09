@@ -1,9 +1,11 @@
 <!-- <header [routerLink]="['/countries-header']"></header> -->
+<link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 <header class="py-5 bg-light border-bottom mb-4">
+    
     <div class="container">
         <div class="text-center my-5">
-            <h1 class="fw-bolder">Search after it</h1>
-            <p class="lead mb-0">And get to know the countries of the world</p>
+            <h1 class="fw-bolder" style="font-family: 'Gaegu', cursive; ">Search after it</h1>
+            <p class="lead mb-0">and get to know the countries of the world</p>
         </div>
         <!-- <div class="input-group mb-0 w-25 mx-auto">
             <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -14,8 +16,8 @@
         <div class="input-group mb-0 w-50 mx-auto" >
             <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
             <div class="input-group-append">
-              <button type="button" class="btn btn-outline-secondary" [routerLink]="['/country']">Search</button>
-              <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="btn btn-outline-secondary" [routerLink]="['/country']" style="background-color: rgb(88, 187, 187);border: 0;">Search</button>
+              <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="background-color: rgb(88, 187, 187);border: 0;" aria-haspopup="true" aria-expanded="false">
                 <span class="sr-only">Find by</span>
               </button>
               <div class="dropdown-menu">
@@ -37,7 +39,7 @@
                 <div class="card-body">
                     <h5 class="card-title">"Country name"</h5>
                     <p class="card-text">Capital: "Capital name"</p>
-                    <a [routerLink]="['/country']" class="btn btn-outline-primary btn-sm">View more</a>
+                    <a [routerLink]="['/country']" class="btn btn-sm">View more</a>
                 </div>
             </div>
         </div>
@@ -47,7 +49,7 @@
                 <div class="card-body">
                     <h5 class="card-title">"Country name"</h5>
                     <p class="card-text">Capital: "Capital name"</p>
-                    <a [routerLink]="['/country']" class="btn btn-outline-primary btn-sm">View more</a>
+                    <a [routerLink]="['/country']" class="btn btn-sm">View more</a>
                 </div>
             </div>
         </div>
@@ -57,15 +59,15 @@
                 <div class="card-body">
                     <h5 class="card-title">"Country name"</h5>
                     <p class="card-text">Capital: "Capital name"</p>
-                    <a [routerLink]="['/country']" class="btn btn-outline-primary btn-sm">View more</a>
+                    <a [routerLink]="['/country']" class="btn btn-sm">View more</a>
                 </div>
             </div>
         </div>
     </div>
-    <nav aria-label="Pagination"> 
-        <ul class="pagination justify-content-center my-4">
-            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-            <li class="page-item"><a class="page-link" href="#!">2</a></li>
+    <nav aria-label="Pagination" > 
+        <ul  class="pagination justify-content-center my-4">
+            <li class="page-item active" aria-current="page"><a class="page-link" href="#!" >1</a></li>
+            <li class="page-item"><a class="page-link" href="#!" >2</a></li>
             <li class="page-item"><a class="page-link" href="#!">3</a></li>
             <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
             <li class="page-item"><a class="page-link" href="#!">15</a></li>
