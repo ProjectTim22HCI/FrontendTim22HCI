@@ -1,3 +1,11 @@
+<header class="py-5 bg-light border-bottom mb-4">
+  <div class="container">
+      <div class="text-center my-5">
+          <h1 class="fw-bolder">Welcome to Blog Home!</h1>
+          <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p>
+      </div>
+  </div>
+</header>
 <body>
   <div class="s130">
     <form>
@@ -11,7 +19,7 @@
           <input id="search" type="text" placeholder="Choose a country" />
         </div>
         <div class="input-field second-wrap">
-          <button class="btn-search" type="button">SEARCH</button>
+          <button class="btn-search" type="button" [routerLink]="['/country']">SEARCH</button>
         </div>
       </div>
       <span class="info">Learn about Flags, Currencies, Capitals...</span>

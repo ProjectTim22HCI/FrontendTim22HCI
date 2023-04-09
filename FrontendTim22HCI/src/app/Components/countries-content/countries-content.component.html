@@ -1,4 +1,34 @@
-
+<!-- <header [routerLink]="['/countries-header']"></header> -->
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="fw-bolder">Search after it</h1>
+            <p class="lead mb-0">And get to know the countries of the world</p>
+        </div>
+        <!-- <div class="input-group mb-0 w-25 mx-auto">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+             </div>
+        </div> -->
+        <div class="input-group mb-0 w-50 mx-auto" >
+            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-outline-secondary" [routerLink]="['/country']">Search</button>
+              <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Find by</span>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </div>
+          </div>
+    </div>
+</header>
 <div class="container" >
     <div class="row">
         <div class="col-4">
@@ -7,7 +37,7 @@
                 <div class="card-body">
                     <h5 class="card-title">"Country name"</h5>
                     <p class="card-text">Capital: "Capital name"</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">View more</a>
+                    <a [routerLink]="['/country']" class="btn btn-outline-primary btn-sm">View more</a>
                 </div>
             </div>
         </div>
@@ -17,7 +47,7 @@
                 <div class="card-body">
                     <h5 class="card-title">"Country name"</h5>
                     <p class="card-text">Capital: "Capital name"</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">View more</a>
+                    <a [routerLink]="['/country']" class="btn btn-outline-primary btn-sm">View more</a>
                 </div>
             </div>
         </div>
@@ -27,12 +57,12 @@
                 <div class="card-body">
                     <h5 class="card-title">"Country name"</h5>
                     <p class="card-text">Capital: "Capital name"</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">View more</a>
+                    <a [routerLink]="['/country']" class="btn btn-outline-primary btn-sm">View more</a>
                 </div>
             </div>
         </div>
     </div>
-    <nav aria-label="Pagination">
+    <nav aria-label="Pagination"> 
         <ul class="pagination justify-content-center my-4">
             <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
             <li class="page-item"><a class="page-link" href="#!">2</a></li>
