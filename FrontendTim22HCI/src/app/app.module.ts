@@ -8,7 +8,6 @@ import { HomeContentComponent } from './Components/home-content/home-content.com
 import { CountryHeaderComponent } from './Components/country-header/country-header.component';
 import { CountryContentComponent } from './Components/country-content/country-content.component';
 import { CountriesContentComponent } from './Components/countries-content/countries-content.component';
-import { CountriesHeaderComponent } from './Components/countries-header/countries-header.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoute: Routes = [
@@ -23,7 +22,6 @@ const appRoute: Routes = [
     CountryHeaderComponent,
     CountryContentComponent,
     CountriesContentComponent,
-    CountriesHeaderComponent
   ],
   imports: [
     BrowserModule,
