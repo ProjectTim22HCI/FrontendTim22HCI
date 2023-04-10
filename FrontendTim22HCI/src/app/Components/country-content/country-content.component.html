@@ -44,11 +44,17 @@
                 </div>
             </div>
             <div class="card mb-4">
-                <div class="card-header" style="background-color: rgb(88, 187, 187);">Compare with another country</div>
+                <div class="card-header" style="background-color: rgb(88, 187, 187);">Compare with other countries</div>
                 <div class="card-body">
                     <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter county name..." aria-label="Enter country name..." aria-describedby="button-search" />
-                        <button [routerLink]="['/comparison']" class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;">Compare</button>
+                        <input class="form-control" type="text" placeholder="Enter second county name..." aria-label="Enter second country name..." aria-describedby="button-search" />
+                        <button [routerLink]="['/comparison']" class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;">Compare two</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="Enter third county name..." aria-label="Enter third country name..." aria-describedby="button-search" />
+                        <button [routerLink]="['/comparison-three']" class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;">Compare three</button>
                     </div>
                 </div>
             </div>
