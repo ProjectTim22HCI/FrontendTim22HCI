@@ -1,7 +1,7 @@
 export interface Country{
     name: string;
     independent: boolean;
-    currencies: Currency[];
+    currencies: string[];
     capital: string;
     map: string;
     population: number;
@@ -9,9 +9,5 @@ export interface Country{
     coatOfArms: string;
     timezones: string[];
     continents: string[];
-}
-
-export interface Currency{
-    name: string;
-    symbol: string;
+    languages: string[];
 }
