@@ -10,6 +10,7 @@ import { CountriesContentComponent } from './Components/countries-content/countr
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ComparisonComponent } from './Components/comparison/comparison.component';
+import { ComparisonThreeComponent } from './Components/comparison-three/comparison-three.component';
 
 const appRoute: Routes = [
   {path: 'Home', component: HomeContentComponent}
@@ -23,6 +24,7 @@ const appRoute: Routes = [
     CountryContentComponent,
     CountriesContentComponent,
     ComparisonComponent,
+    ComparisonThreeComponent,
   ],
   imports: [
     BrowserModule,

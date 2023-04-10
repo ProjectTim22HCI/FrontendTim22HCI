@@ -3,7 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 <header class="py-5 bg-light border-bottom mb-4">
   <div class="container">
-      <div class="text-center my-5">
+      <div class="text-center my-5" style="background-color: rgb(255, 255, 255, 0.7);">
           <h1 class="fw-bolder" style="font-family: 'Gaegu', cursive;
 
           ">Welcome to CountryLearn,</h1>
@@ -31,7 +31,22 @@
           " type="button" [routerLink]="['/country']" >SEARCH</button>
         </div>
       </div>
-      <span class="info" style="margin: 0;">Find the differences between the two countries</span>
+      <span class="info" style="margin: 0;">Find the differences between two countries</span>
+        <div class="inner-form">
+        <div class="input-field first-wrap">
+          <div class="svg-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+            </svg>
+          </div>
+          <input id="search" type="text" placeholder="Choose second country" style="opacity: 0.7;"/>
+        </div>
+        <div class="input-field second-wrap">
+          <button class="btn-search" style="background-color: white;color: rgb(88, 187, 187);
+          " type="button" [routerLink]="['/comparison']" >COMPARE TWO</button>
+        </div>
+      </div>
+      <span class="info" style="margin: 0;">Find the differences between three countries</span>
       
       <div class="inner-form">
         <div class="input-field first-wrap">
@@ -40,11 +55,11 @@
               <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
             </svg>
           </div>
-          <input id="search" type="text" placeholder="Choose another country" style="opacity: 0.7;"/>
+          <input id="search" type="text" placeholder="Choose third country" style="opacity: 0.7;"/>
         </div>
         <div class="input-field second-wrap">
           <button class="btn-search" style="background-color: white;color: rgb(88, 187, 187);
-          " type="button" [routerLink]="['/comparison']" >COMPARE</button>
+          " type="button" [routerLink]="['/comparison-three']" >COMPARE THREE</button>
         </div>
       </div>
     </form>
