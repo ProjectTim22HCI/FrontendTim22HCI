@@ -3,7 +3,7 @@
     
     <div class="container" >
         <div class="text-center my-5"  style="background-color: rgb(255, 255, 255, 0.7);">
-            <h1 class="fw-bolder" style="font-family: 'Gaegu', cursive; ">Search after county</h1>
+            <h1 class="fw-bolder" style="font-family: 'Gaegu', cursive; ">Search after country</h1>
             <p class="lead mb-0">and get to know the countries of the world!</p>
         </div>
         
@@ -18,8 +18,8 @@
 </header>
 <div class="container" >`
     <div class="row">
-        <div class="col-4" *ngFor="let country of countries">
-            <div class="card " style="width:25rem;" [routerLink]="['/country']">
+        <div class="col-4" *ngFor="let country of countries" attr.data-value="{{country.name}}" id="demo">
+            <div class="card " style="width:25rem;" (click)="chooseCountry()">
                 <img class="card-img-top " src={{country.flag}}>
                 <div class="card-body">
                     <h5 class="card-title">{{country.name}}</h5>

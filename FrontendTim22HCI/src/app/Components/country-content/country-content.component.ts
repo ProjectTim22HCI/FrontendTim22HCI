@@ -25,7 +25,8 @@ export class CountryContentComponent implements OnInit{
   constructor(private countryService: CountryService) {}
 
   ngOnInit(): void {
-    this.countryService.getCountryByName("Serbia").subscribe((data: any) => {
+    let name = localStorage.getItem('countryDetails');
+    this.countryService.getCountryByName(name!).subscribe((data: any) => {
       this.country = this.countryService.parseToCountry(data[0]);
     });
   }
