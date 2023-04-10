@@ -20,3 +20,11 @@ header{
 .list-unstyled{
   color: gray;
 }
+
+.card-img-top{
+  transition: all .2s ease-in-out; 
+}
+
+.card-img-top:hover{
+  transform: scale(1.1);
+}
