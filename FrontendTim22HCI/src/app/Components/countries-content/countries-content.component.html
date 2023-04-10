@@ -1,8 +1,11 @@
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
 <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 <header class="py-5 bg-light border-bottom mb-4">
     
     <div class="container" >
-        <div class="text-center my-5"  style="background-color: rgb(255, 255, 255, 0.7);">
+        <div class="text-center my-5"  style="background-color: rgb(255, 255, 255, 0.9);">
             <h1 class="fw-bolder" style="font-family: 'Gaegu', cursive; ">Search after country</h1>
             <p class="lead mb-0">and get to know the countries of the world!</p>
         </div>
@@ -16,10 +19,10 @@
           </div>
     </div>
 </header>
-<div class="container" >`
-    <div class="row">
-        <div class="col-4" *ngFor="let country of countries" id="demo">
-            <div class="card " style="width:25rem;" (click)="chooseCountry(country.name)">
+<div class="container " >`
+    <div class="row ">
+        <div class="col-4 w3-third" *ngFor="let country of countries" id="demo">
+            <div class="card" style="width:25rem;" (click)="chooseCountry(country.name)">
                 <img class="card-img-top " src={{country.flag}}>
                 <div class="card-body">
                     <h5 class="card-title">{{country.name}}</h5>
