@@ -17,3 +17,6 @@ header{
   font-family: 'Gaegu', cursive;
 }
 
+.list-unstyled{
+  color: gray;
+}
