@@ -1,18 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Country } from 'src/app/Model/Country';
+import { CountryService } from 'src/app/service/country.service';
 
-export class Country{
-  constructor(
-    public nameOfficial: string,
-    public independent: boolean,
-    public currencies: string,
-    public capital: string,
-    public openStreetMaps: string,
-    public population: number,
-    public flagPng: string,
-    public coatOfArmsPng: string
-  ){}
-}
 
 @Component({
   selector: 'app-countries-content',
@@ -23,21 +14,17 @@ export class Country{
 export class CountriesContentComponent implements OnInit{
 
   countries: Country[] | undefined;
+
   constructor(
-    private httpClient:HttpClient
+    private countryService : CountryService
   ){}
 
-  ngOnInit(): void {
-    this,this.getCountries();
+  ngOnInit(){
+    // this.getAllCountries();
   }
 
-  getCountries(){
-    this.httpClient.get<any>('https://restcountries.com/v3.1/all').subscribe(
-      response => {
-        console.log(response);
-        this.countries = response;
-      }
-    )
-  }
+  // getAllCountries() : Observable<Country[]>{
 
+  //   return this.countryService.getAllCountries();
+  //   }
 }
