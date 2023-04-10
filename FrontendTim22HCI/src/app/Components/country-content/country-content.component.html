@@ -3,37 +3,28 @@
 </header>
 <div class="container">
     <div class="row">
-        <!-- Blog entries-->
         <div class="col-lg-8">
-            <!-- Featured blog post-->
             <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                <img class="card-img-top" src={{country.flag}} />
                 <div class="card-body">
-                    <h2 class="card-title display-3" style="font-family: 'Gaegu', cursive;">"Country name"</h2>
+                    <h2 class="card-title display-3" style="font-family: 'Gaegu', cursive;">{{country.name}}</h2>
                     <div class="row ">
                         <div class="col-lg-7">
-                            <div class="small text-muted fs-4">Capital : "Capital name"</div>
-                            <div class="small text-muted fs-4">Independent : "No"</div>
-                            <div class="small text-muted fs-4">Population : "Number"</div>
-                            <div class="small text-muted fs-4">Map: <a href="#!"  class="text-decoration-none">"Map URL"</a></div>
+                            <div class="small text-muted fs-4">Capital city: {{country.capital}}</div>
+                            <div class="small text-muted fs-4">Independent: {{country.independent}}</div>
+                            <div class="small text-muted fs-4">Population: {{country.population}}</div>
+                            <div class="small text-muted fs-4">Map: <a href={{country.map}}  class="text-decoration-none">{{country.map}}</a></div>
                         </div>
                         <div class="col-lg-5 justify-content-end">
-                            <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                            <img class="card-img-top" src={{country.coatOfArms}}/>
                             <div class="justify-content-end">Coat of arms</div>
                         </div>
                     </div>
-
-                    <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a class="btn btn-primary" [routerLink]="['/country']" style="background-color: rgb(88, 187, 187);border: 0;">Read more →</a> -->
                 </div>
             </div>
-        
-            <!-- Nested row for non-featured blog posts-->
         </div>
         
-        <!-- Side widgets-->
         <div class="col-lg-4">
-            <!-- Search widget-->
             <div class="card mb-4">
                 <div class="card-header">Find another country</div>
                 <div class="card-body">
@@ -43,38 +34,12 @@
                     </div>
                 </div>
             </div>
-            <!-- Categories widget
-            <div class="card mb-4">
-                <div class="card-header">Categories</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled mb-0">
-                                <li><a href="#!">Web Design</a></li>
-                                <li><a href="#!">HTML</a></li>
-                                <li><a href="#!">Freebies</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled mb-0">
-                                <li><a href="#!">JavaScript</a></li>
-                                <li><a href="#!">CSS</a></li>
-                                <li><a href="#!">Tutorials</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            
-            <!-- Side widget-->
-            
+
             <div class="card mb-4 col-lg-8">
                 <div class="card-header">Continents</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Kontinent 1</li>
-                        <li>Kontinent 2</li>
-                        <li>Kontinent 3</li>
+                        <li *ngFor="let continent of country.continents">{{continent}}</li>
                     </ul>
                 </div>
             </div>
@@ -83,11 +48,7 @@
                 <div class="card-header">Languages</div>
                 <div class="card-body">
                     <ul class="list-unstyled mb-0">
-                        <li>Language 1</li>
-                        <li>Language 2</li>
-                        <li>Language 3</li>
-                        <li>Language 4</li>
-                        <li>Language 5</li>
+                        <li *ngFor="let language of country.languages">{{language}}</li>
                     </ul>
                 </div>
             </div>
@@ -95,10 +56,7 @@
                 <div class="card-header">Currencies</div>
                 <div class="card-body">         
                     <ul class="list-unstyled mb-0">               
-                        <li>Currency 1</li>
-                        <li>Currency 2</li>
-                        <li>Currency 3</li>
-                        <li>Currency 4</li>
+                        <li *ngFor="let currency of country.currencies">{{currency}}</li>
                     </ul>
             </div>
         </div>

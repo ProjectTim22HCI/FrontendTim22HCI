@@ -1,6 +1,6 @@
 export interface Country{
     name: string;
-    independent: boolean;
+    independent: string;
     currencies: string[];
     capital: string;
     map: string;
