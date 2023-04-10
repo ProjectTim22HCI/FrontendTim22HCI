@@ -18,8 +18,8 @@
 </header>
 <div class="container" >`
     <div class="row">
-        <div class="col-4" *ngFor="let country of countries" attr.data-value="{{country.name}}" id="demo">
-            <div class="card " style="width:25rem;" (click)="chooseCountry()">
+        <div class="col-4" *ngFor="let country of countries" id="demo">
+            <div class="card " style="width:25rem;" (click)="chooseCountry(country.name)">
                 <img class="card-img-top " src={{country.flag}}>
                 <div class="card-body">
                     <h5 class="card-title">{{country.name}}</h5>

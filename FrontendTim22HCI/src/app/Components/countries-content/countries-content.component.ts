@@ -18,6 +18,7 @@ export class CountriesContentComponent implements OnInit{
   constructor(private countryService: CountryService, private router: Router) {}
 
   ngOnInit(): void{
+    localStorage.removeItem('countryDetails');
     this.countryService.getAllCountries().subscribe((data: any) => {
       data.forEach((element: any) => {
         let country: Country = this.countryService.parseToCountry(element);
@@ -26,10 +27,8 @@ export class CountriesContentComponent implements OnInit{
     });
   }
 
-  chooseCountry(){
-    let countryName = document.getElementById('demo')!.getAttribute('data-value');
-    localStorage.removeItem('countryDetails');
-    localStorage.setItem('countryDetails', countryName!);
+  chooseCountry(name: string){
+    localStorage.setItem('countryDetails', name);
     this.router.navigate(['country']);
   }
 
