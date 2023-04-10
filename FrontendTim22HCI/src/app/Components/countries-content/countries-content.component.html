@@ -1,4 +1,3 @@
-<!-- <header [routerLink]="['/countries-header']"></header> -->
 <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 <header class="py-5 bg-light border-bottom mb-4">
     
@@ -7,12 +6,6 @@
             <h1 class="fw-bolder" style="font-family: 'Gaegu', cursive; ">Search after county</h1>
             <p class="lead mb-0">and get to know the countries of the world!</p>
         </div>
-        <!-- <div class="input-group mb-0 w-25 mx-auto">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Button</button>
-             </div>
-        </div> -->
         
         <div class="input-group mb-0 w-50 mx-auto" >
             <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
@@ -25,33 +18,14 @@
 </header>
 <div class="container" >`
     <div class="row">
-    <!-- <div class="row" *ngFor="let country of getAllCountries() | async"> -->
-        <div class="col-4">
+        <div class="col-4" *ngFor="let country of countries">
             <div class="card " style="width:25rem;">
-                <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
+                <img class="card-img-top " src={{country.flag}}>
                 <div class="card-body">
-                    <h5 class="card-title">ASD</h5>
-                    <p class="card-text">Capital: "Capital name"</p>
-                    <a [routerLink]="['/country']" class="btn btn-sm">View more</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card " style="width:25rem;">
-                <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">"Country name"</h5>
-                    <p class="card-text">Capital: "Capital name"</p>
-                    <a [routerLink]="['/country']" class="btn btn-sm">View more</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card " style="width:25rem;">
-                <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">"Country name"</h5>
-                    <p class="card-text">Capital: "Capital name"</p>
+                    <h5 class="card-title">{{country.name}}</h5>
+                    <p class="card-text">Capital city: {{country.capital}}</p>
+                    <p class="card-text">Population: {{country.population}}</p>
+                    <p class="card-text">Continent: {{country.continents}}</p>
                     <a [routerLink]="['/country']" class="btn btn-sm">View more</a>
                 </div>
             </div>

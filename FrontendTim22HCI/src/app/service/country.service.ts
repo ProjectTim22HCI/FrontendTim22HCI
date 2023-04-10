@@ -11,23 +11,10 @@ export class CountryService {
   constructor(private http: HttpClient) { }
 
   public getAllCountries(): Observable<any>{
-    // let countries: Country[] = [];
-    // this.http.get(environment.apiHost + "v3.1/all").subscribe((all: any) => {
-    //   all.forEach((element: any) => {
-    //     let country: Country = this.parseToCountry(element);
-    //     countries.push(country);
-    //   });
-    // });
-    // return of(countries);
     return this.http.get<any>(environment.apiHost + "v3.1/all");
   }
 
   public getCountryByName(name: string): Observable<any>{
-    // let country: Country = {} as Country;
-    // this.http.get(environment.apiHost + "v3.1/name/" + name).subscribe((element: any) => {
-    //   country = this.parseToCountry(element[0]);
-    // });
-    // return of(country);
     return this.http.get<any>(environment.apiHost + "v3.1/name/" + name);
   }
 
@@ -59,7 +46,7 @@ export class CountryService {
       });
     }
     country.currencies = currencies;
-    country.capital = element.capital[0];
+    country.capital = element.capital;
     country.map = element.maps.openStreetMaps;
     country.population = element.population;
     country.flag = element.flags.png;

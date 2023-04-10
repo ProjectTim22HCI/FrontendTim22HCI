@@ -12,19 +12,17 @@ import { CountryService } from 'src/app/service/country.service';
 })
 
 export class CountriesContentComponent implements OnInit{
+  countries: Country[] = [];
 
-  countries: Country[] | undefined;
+  constructor(private countryService: CountryService) {}
 
-  constructor(
-    private countryService : CountryService
-  ){}
-
-  ngOnInit(){
-    // this.getAllCountries();
+  ngOnInit(): void{
+    this.countryService.getAllCountries().subscribe((data: any) => {
+      data.forEach((element: any) => {
+        let country: Country = this.countryService.parseToCountry(element);
+        this.countries.push(country);
+      });
+    });
   }
 
-  // getAllCountries() : Observable<Country[]>{
-
-  //   return this.countryService.getAllCountries();
-  //   }
 }
