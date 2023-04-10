@@ -26,26 +26,11 @@
         
         <div class="col-lg-4">
             <div class="card mb-4">
-                <div class="card-header">Find another country</div>
-                <div class="card-body">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter county name..." aria-label="Enter country name..." aria-describedby="button-search" />
-                        <button [routerLink]="['/country']" class="btn btn-primary" id="button-search" type="button" style="background-color: rgb(88, 187, 187);border: 0;">Search</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-4">
                 <div class="card-header" style="background-color: rgb(88, 187, 187); color: white;">Compare with other countries</div>
                 <div class="card-body">
                     <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter second county name..." aria-label="Enter second country name..." aria-describedby="button-search" />
-                        <button [routerLink]="['/comparison']" class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;">Compare two</button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter third county name..." aria-label="Enter third country name..." aria-describedby="button-search" />
-                        <button [routerLink]="['/comparison-three']" class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;">Compare three</button>
+                        <input id="compare" class="form-control" type="text" placeholder="Enter name of the second country..." aria-label="Enter second country name..." aria-describedby="button-search" />
+                        <button class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;" (click)="compare()">Compare</button>
                     </div>
                 </div>
             </div>

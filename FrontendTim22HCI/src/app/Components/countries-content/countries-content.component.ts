@@ -18,7 +18,7 @@ export class CountriesContentComponent implements OnInit{
   constructor(private countryService: CountryService, private router: Router) {}
 
   ngOnInit(): void{
-    localStorage.removeItem('countryDetails');
+    localStorage.clear();
     this.countryService.getAllCountries().subscribe((data: any) => {
       data.forEach((element: any) => {
         let country: Country = this.countryService.parseToCountry(element);
