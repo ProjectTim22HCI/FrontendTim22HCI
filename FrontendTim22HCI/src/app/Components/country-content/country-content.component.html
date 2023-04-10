@@ -39,7 +39,16 @@
                 <div class="card-body">
                     <div class="input-group">
                         <input class="form-control" type="text" placeholder="Enter county name..." aria-label="Enter country name..." aria-describedby="button-search" />
-                        <button class="btn btn-primary" id="button-search" type="button" style="background-color: rgb(88, 187, 187);border: 0;">Search</button>
+                        <button [routerLink]="['/country']" class="btn btn-primary" id="button-search" type="button" style="background-color: rgb(88, 187, 187);border: 0;">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header" style="background-color: rgb(88, 187, 187);">Compare with another country</div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="Enter county name..." aria-label="Enter country name..." aria-describedby="button-search" />
+                        <button [routerLink]="['/comparison']" class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;">Compare</button>
                     </div>
                 </div>
             </div>
@@ -68,7 +77,7 @@
             
             <!-- Side widget-->
             
-            <div class="card mb-4 col-lg-8">
+            <div class="card mb-4 data col-lg-8">
                 <div class="card-header">Continents</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
@@ -79,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="card mb-4 col-lg-8">
+            <div class="card mb-4 data col-lg-8">
                 <div class="card-header">Languages</div>
                 <div class="card-body">
                     <ul class="list-unstyled mb-0">
@@ -91,7 +100,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="card mb-4 col-lg-8">
+            <div class="card mb-4 data col-lg-8">
                 <div class="card-header">Currencies</div>
                 <div class="card-body">         
                     <ul class="list-unstyled mb-0">               
