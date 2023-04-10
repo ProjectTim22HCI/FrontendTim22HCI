@@ -9,10 +9,22 @@
             <div class="card mb-4">
                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
                 <div class="card-body">
-                    <div class="small text-muted">January 1, 2023</div>
-                    <h2 class="card-title" style="font-family: 'Gaegu', cursive;">Featured Post Title</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a class="btn btn-primary" [routerLink]="['/country']" style="background-color: rgb(88, 187, 187);border: 0;">Read more →</a>
+                    <h2 class="card-title display-3" style="font-family: 'Gaegu', cursive;">"Country name"</h2>
+                    <div class="row ">
+                        <div class="col-lg-7">
+                            <div class="small text-muted fs-4">Capital : "Capital name"</div>
+                            <div class="small text-muted fs-4">Independent : "No"</div>
+                            <div class="small text-muted fs-4">Population : "Number"</div>
+                            <div class="small text-muted fs-4">Map: <a href="#!"  class="text-decoration-none">"Map URL"</a></div>
+                        </div>
+                        <div class="col-lg-5 justify-content-end">
+                            <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                            <div class="justify-content-end">Coat of arms</div>
+                        </div>
+                    </div>
+
+                    <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+                    <a class="btn btn-primary" [routerLink]="['/country']" style="background-color: rgb(88, 187, 187);border: 0;">Read more →</a> -->
                 </div>
             </div>
         
@@ -31,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Categories widget-->
+            <!-- Categories widget
             <div class="card mb-4">
                 <div class="card-header">Categories</div>
                 <div class="card-body">
@@ -52,12 +64,42 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             <!-- Side widget-->
-            <div class="card mb-4">
-                <div class="card-header">Side Widget</div>
-                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+            
+            <div class="card mb-4 col-lg-8">
+                <div class="card-header">Continents</div>
+                <div class="card-body col-sm-6">
+                    <ul class="list-unstyled mb-0">
+                        <li>Kontinent 1</li>
+                        <li>Kontinent 2</li>
+                        <li>Kontinent 3</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4 col-lg-8">
+                <div class="card-header">Languages</div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li>Language 1</li>
+                        <li>Language 2</li>
+                        <li>Language 3</li>
+                        <li>Language 4</li>
+                        <li>Language 5</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card mb-4 col-lg-8">
+                <div class="card-header">Currencies</div>
+                <div class="card-body">         
+                    <ul class="list-unstyled mb-0">               
+                        <li>Currency 1</li>
+                        <li>Currency 2</li>
+                        <li>Currency 3</li>
+                        <li>Currency 4</li>
+                    </ul>
             </div>
         </div>
     </div>
