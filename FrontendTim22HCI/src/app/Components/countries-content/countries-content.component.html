@@ -32,10 +32,11 @@
                   <div [innerHTML]="notFound"></div>
                 </ng-template>
               </div>
+
           </div>
     </div>
 </header>
-<div class="container " >`
+<div class="container " >
     <div class="row ">
         <div class="col-4 w3-third" *ngFor="let country of countries" id="demo">
             <div class="card mb-5" style="width:25rem;" (click)="chooseCountry(country.name)">

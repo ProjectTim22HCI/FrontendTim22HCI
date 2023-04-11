@@ -9,6 +9,9 @@ import { CountryService } from 'src/app/service/country.service';
   styleUrls: ['./comparison.component.css']
 })
 export class ComparisonComponent implements OnInit{
+  countries: Country[] = [];
+  keyword = 'name';
+
   firstCountry: Country = {
     name: '',
     independent: '',
@@ -40,6 +43,7 @@ export class ComparisonComponent implements OnInit{
   constructor(private countryService: CountryService, private router: Router) {}
 
   ngOnInit(): void {
+    this.countriesToList()
     let firstCountryName = localStorage.getItem('firstCountry');
     this.countryService.getCountryByName(firstCountryName!).subscribe((data: any) => {
       this.firstCountry = this.countryService.parseToCountry(data[0]);
@@ -55,6 +59,28 @@ export class ComparisonComponent implements OnInit{
     const thirdCountry = input?.value;
     localStorage.setItem('thirdCountry', thirdCountry!);
     this.router.navigate(['comparison-three']);
+  }
+
+  countriesToList(): void{
+    this.countryService.getAllCountries().subscribe((data: any) => {
+      data.forEach((element: any) => {
+        let country: Country = this.countryService.parseToCountry(element);
+        this.countries.push(country);
+      });
+    });
+  }
+
+  selectEvent(item: any) {
+    // do something with selected item
+  }
+
+  onChangeSearch(search: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
+
+  onFocused(e: any) {
+    // do something
   }
 
 }
