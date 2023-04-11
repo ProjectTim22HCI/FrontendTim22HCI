@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Country } from 'src/app/Model/Country';
 import { CountryService } from 'src/app/service/country.service';
 
@@ -36,7 +37,7 @@ export class ComparisonComponent implements OnInit{
     languages: []
   };
 
-  constructor(private countryService: CountryService) {}
+  constructor(private countryService: CountryService, private router: Router) {}
 
   ngOnInit(): void {
     let firstCountryName = localStorage.getItem('firstCountry');
@@ -47,6 +48,13 @@ export class ComparisonComponent implements OnInit{
     this.countryService.getCountryByName(secondCountryName!).subscribe((data: any) => {
       this.secondCountry = this.countryService.parseToCountry(data[0]);
     });
+  }
+
+  compare(): void {
+    const input = document.getElementById('compare') as HTMLInputElement | null;
+    const thirdCountry = input?.value;
+    localStorage.setItem('thirdCountry', thirdCountry!);
+    this.router.navigate(['comparison-three']);
   }
 
 }
