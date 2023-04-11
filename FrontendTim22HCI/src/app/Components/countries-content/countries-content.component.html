@@ -11,8 +11,27 @@
         </div>
         
         <div class="input-group mb-0 w-50 mx-auto" >
-            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-            <div class="input-group-append">
+            <div class="ng-autocomplete">
+                <ng-autocomplete
+                  [data]="countries"
+                  [searchKeyword]="keyword"
+                  placeholder="Enter the Country Name"
+                  (selected)='selectEvent($event)'
+                  (inputChanged)='onChangeSearch($event)'
+                  (inputFocused)='onFocused($event)'
+                  historyIdentifier="countries"
+                  [itemTemplate]="itemTemplate"
+                  [notFoundTemplate]="notFoundTemplate">
+                </ng-autocomplete>
+              
+                <ng-template #itemTemplate let-item>
+                  <a [innerHTML]="item.name"></a>
+                </ng-template>
+              
+                <ng-template #notFoundTemplate let-notFound>
+                  <div [innerHTML]="notFound"></div>
+                </ng-template>
+              </div>            <div class="input-group-append">
               <button type="button" class="btn btn-outline-secondary" [routerLink]="['/country']" style="background-color: rgb(88, 187, 187);border: 0;color: black;" placeholder="Enter name of the country...">SEARCH</button>
               
             </div>
