@@ -14,6 +14,7 @@ import { CountryService } from 'src/app/service/country.service';
 
 export class CountriesContentComponent implements OnInit{
   countries: Country[] = [];
+  keyword = 'name';
 
   constructor(private countryService: CountryService, private router: Router) {}
 
@@ -30,6 +31,19 @@ export class CountriesContentComponent implements OnInit{
   chooseCountry(name: string){
     localStorage.setItem('countryDetails', name);
     this.router.navigate(['country']);
+  }
+
+  selectEvent(item: any) {
+    // do something with selected item
+  }
+
+  onChangeSearch(search: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
+
+  onFocused(e: any) {
+    // do something
   }
 
 }
