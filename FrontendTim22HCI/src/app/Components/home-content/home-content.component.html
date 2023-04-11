@@ -15,9 +15,7 @@
     <form>
       
       <span class="info" style="margin: 0;">Learn about Flags, Currencies, Capitals...</span>
-      
-      <!-- <div class="inner-form" style="
-      box-shadow: 5px 6px 8px #888888;">
+
       <div class="ng-autocomplete">
         <ng-autocomplete
           [data]="countries"
@@ -38,49 +36,10 @@
         <ng-template #notFoundTemplate let-notFound>
           <div [innerHTML]="notFound"></div>
         </ng-template>
+
       </div>
-        <div class="input-field second-wrap">
-          <button class="btn-search" style="background-color: rgb(88, 187, 187);color: black;
-          " type="button" [routerLink]="['/country']" >SEARCH</button>
-        </div>
+
       
-      </div> -->
-      <div class="ng-autocomplete">
-        <ng-autocomplete
-          [data]="countries"
-          [searchKeyword]="keyword"
-          placeholder="Enter the Country Name"
-          (selected)='selectEvent($event)'
-          (inputChanged)='onChangeSearch($event)'
-          (inputFocused)='onFocused($event)'
-          historyIdentifier="countries"
-          [itemTemplate]="itemTemplate"
-          [notFoundTemplate]="notFoundTemplate">
-        </ng-autocomplete>
-      
-        <ng-template #itemTemplate let-item>
-          <a [innerHTML]="item.name"></a>
-        </ng-template>
-      
-        <ng-template #notFoundTemplate let-notFound>
-          <div [innerHTML]="notFound"></div>
-        </ng-template>
-      </div>
-              <div class="input-field second-wrap">
-          <button class="btn-search" style="background-color: rgb(88, 187, 187);color: black;
-          " type="button" [routerLink]="['/country']" >SEARCH</button>
-        </div>
-      
-      <!-- <div class="card" [hidden]="!showSearches">
-        <div class="search">
-          <div *ngFor="let country of searchedCountries; trackBy: trackById" tappable (click)="setCountryName(country)" class="search-result">
-              {{country}}
-          </div>     
-        </div>
-        <p class="search" *ngIf="searchedCountries && searchedCountries.length <= 0 && !isSearching">No Car found</p>
-        <p class="search" [hidden]="!isSearching">Searching cars...</p>
-        <app-autocomplete (setcarNameEvent)="setCarName($event)"></app-autocomplete>
-      </div> -->
       
     </form>
     
