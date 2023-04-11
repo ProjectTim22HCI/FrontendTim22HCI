@@ -6,7 +6,35 @@
 
 <div class="w3-content" style="max-width:1500px">
 
-    <div class="w3-row-padding" style="margin-bottom:128px">
+    <div class="w3-row-padding" style="margin-bottom:128px; ">
+        <div class="card mb-4" style="width: 50%; margin: auto; ">
+            <div class="card-header" style="background-color: rgb(88, 187, 187); color: white;">Compare with another country</div>
+            <div class="card-body">
+                <div class="input-group">
+                    <div class="ng-autocomplete">
+                        <ng-autocomplete
+                          [data]="countries"
+                          [searchKeyword]="keyword"
+                          placeholder="Enter the Country Name"
+                          (selected)='selectEvent($event)'
+                          (inputChanged)='onChangeSearch($event)'
+                          (inputFocused)='onFocused($event)'
+                          historyIdentifier="countries"
+                          [itemTemplate]="itemTemplate"
+                          [notFoundTemplate]="notFoundTemplate">
+                        </ng-autocomplete>
+                      
+                        <ng-template #itemTemplate let-item>
+                          <a [innerHTML]="item.name"></a>
+                        </ng-template>
+                      
+                        <ng-template #notFoundTemplate let-notFound>
+                          <div [innerHTML]="notFound"></div>
+                        </ng-template>
+                      </div>                            
+                </div>
+            </div>
+        </div>
         <div class="w3-row-padding">
             <div>
                 <div class="card w3-half" style="padding: 3%;">
@@ -94,7 +122,7 @@
 
                 </div>
 
-                <div class="card mb-4">
+                <!-- <div class="card mb-4">
                     <div class="card-header" style="background-color: rgb(88, 187, 187); color: white;">Compare with another country</div>
                     <div class="card-body">
                         <div class="input-group">
@@ -121,7 +149,7 @@
                               </div>                            
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
