@@ -9,7 +9,7 @@
         <div class="w3-row-padding">
             <div>
                 <div class="card w3-third" style="padding: 3%;">
-                    <img class="card-img-top " src={{firstCountry.flag}}>
+                    <img class="card-img-top " (click)="showCountry(firstCountry.name)" src={{firstCountry.flag}}>
                     <div class="card-body">
                         <h2 class="card-title">{{firstCountry.name}}</h2>
                         <div class=" text-muted fs-4">Capital city: {{firstCountry.capital}}</div>
@@ -51,7 +51,7 @@
 
                 </div>
                 <div class="card w3-third" style="padding: 3%;">
-                    <img class="card-img-top " src={{secondCountry.flag}}>
+                    <img class="card-img-top " (click)="showCountry(secondCountry.name)" src={{secondCountry.flag}}>
                     <div class="card-body">
                         <h2 class="card-title">{{secondCountry.name}}</h2>
                         <div class=" text-muted fs-4">Capital city: {{secondCountry.capital}}</div>
@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="card w3-third" style="padding: 3%;">
-                    <img class="card-img-top " src={{thirdCountry.flag}}>
+                    <img class="card-img-top " (click)="showCountry(thirdCountry.name)" src={{thirdCountry.flag}}>
                     <div class="card-body">
                         <h2 class="card-title">{{thirdCountry.name}}</h2>
                         <div class=" text-muted fs-4">Capital city: {{thirdCountry.capital}}</div>

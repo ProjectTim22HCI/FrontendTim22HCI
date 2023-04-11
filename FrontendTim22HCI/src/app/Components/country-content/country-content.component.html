@@ -50,7 +50,6 @@
                               <div [innerHTML]="notFound"></div>
                             </ng-template>
                           </div>   
-                        <button class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;" (click)="compare()">Compare</button>
                     </div>
                 </div>
             </div>
@@ -78,7 +77,16 @@
                     <ul class="list-unstyled mb-0">               
                         <li *ngFor="let currency of country.currencies">{{currency}}</li>
                     </ul>
+                </div>
             </div>
-        </div>
+
+            <div class="card mb-4 data col-lg-8">
+                <div class="card-header">Timezones</div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li *ngFor="let timezone of country.timezones">{{timezone}}</li>
+                    </ul>
+                </div>
+            </div>
     </div>
 </div>

@@ -54,13 +54,6 @@ export class ComparisonComponent implements OnInit{
     });
   }
 
-  compare(): void {
-    const input = document.getElementById('compare') as HTMLInputElement | null;
-    const thirdCountry = input?.value;
-    localStorage.setItem('thirdCountry', thirdCountry!);
-    this.router.navigate(['comparison-three']);
-  }
-
   countriesToList(): void{
     this.countryService.getAllCountries().subscribe((data: any) => {
       data.forEach((element: any) => {
@@ -71,7 +64,13 @@ export class ComparisonComponent implements OnInit{
   }
 
   selectEvent(item: any) {
-    // do something with selected item
+    localStorage.setItem('thirdCountry', item.name!);
+    this.router.navigate(['comparison-three']);
+  }
+
+  showCountry(name: string){
+    localStorage.setItem('countryDetails', name);
+    this.router.navigate(['country']);
   }
 
   onChangeSearch(search: string) {

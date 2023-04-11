@@ -36,15 +36,6 @@ export class CountryContentComponent implements OnInit{
     );
   }
 
-  compare(): void {
-    let firstCountry = localStorage.getItem('countryDetails');
-    const input = document.getElementById('compare') as HTMLInputElement | null;
-    const secondCountry = input?.value;
-    localStorage.setItem('firstCountry', firstCountry!);
-    localStorage.setItem('secondCountry', secondCountry!);
-    this.router.navigate(['comparison']);
-  }
-
   countriesToList(): void{
     this.countryService.getAllCountries().subscribe((data: any) => {
       data.forEach((element: any) => {
@@ -55,7 +46,10 @@ export class CountryContentComponent implements OnInit{
   }
 
   selectEvent(item: any) {
-    // do something with selected item
+    let firstCountry = localStorage.getItem('countryDetails');
+    localStorage.setItem('firstCountry', firstCountry!);
+    localStorage.setItem('secondCountry', item.name!);
+    this.router.navigate(['comparison']);
   }
 
   onChangeSearch(search: string) {
