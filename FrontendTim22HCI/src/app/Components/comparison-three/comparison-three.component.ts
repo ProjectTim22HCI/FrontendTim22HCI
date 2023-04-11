@@ -65,6 +65,13 @@ export class ComparisonThreeComponent implements OnInit{
     this.countryService.getCountryByName(thirdCountryName!).subscribe((data: any) => {
       this.thirdCountry = this.countryService.parseToCountry(data[0]);
     });
+
+    
+  }
+
+  showCountry(name: string){
+    localStorage.setItem('countryDetails', name);
+    this.router.navigate(['country']);
   }
 
 }
