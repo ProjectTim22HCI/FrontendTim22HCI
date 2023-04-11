@@ -36,7 +36,8 @@ export class HomeContentComponent {
   }
 
   selectEvent(item: any) {
-    // do something with selected item
+    localStorage.setItem('countryDetails', item.name);
+    this.router.navigate(['country']);
   }
 
   onChangeSearch(search: string) {
