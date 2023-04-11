@@ -16,21 +16,72 @@
       
       <span class="info" style="margin: 0;">Learn about Flags, Currencies, Capitals...</span>
       
-      <div class="inner-form" style="
+      <!-- <div class="inner-form" style="
       box-shadow: 5px 6px 8px #888888;">
-        <div class="input-field first-wrap">
-          <div class="svg-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-            </svg>
-          </div>
-          <input id="search" type="text" placeholder="Enter name of the country..." />
-        </div>
+      <div class="ng-autocomplete">
+        <ng-autocomplete
+          [data]="countries"
+          [searchKeyword]="keyword"
+          placeholder="Enter the Country Name"
+          (selected)='selectEvent($event)'
+          (inputChanged)='onChangeSearch($event)'
+          (inputFocused)='onFocused($event)'
+          historyIdentifier="countries"
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate">
+        </ng-autocomplete>
+      
+        <ng-template #itemTemplate let-item>
+          <a [innerHTML]="item.name"></a>
+        </ng-template>
+      
+        <ng-template #notFoundTemplate let-notFound>
+          <div [innerHTML]="notFound"></div>
+        </ng-template>
+      </div>
         <div class="input-field second-wrap">
           <button class="btn-search" style="background-color: rgb(88, 187, 187);color: black;
           " type="button" [routerLink]="['/country']" >SEARCH</button>
         </div>
+      
+      </div> -->
+      <div class="ng-autocomplete">
+        <ng-autocomplete
+          [data]="countries"
+          [searchKeyword]="keyword"
+          placeholder="Enter the Country Name"
+          (selected)='selectEvent($event)'
+          (inputChanged)='onChangeSearch($event)'
+          (inputFocused)='onFocused($event)'
+          historyIdentifier="countries"
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate">
+        </ng-autocomplete>
+      
+        <ng-template #itemTemplate let-item>
+          <a [innerHTML]="item.name"></a>
+        </ng-template>
+      
+        <ng-template #notFoundTemplate let-notFound>
+          <div [innerHTML]="notFound"></div>
+        </ng-template>
       </div>
+              <div class="input-field second-wrap">
+          <button class="btn-search" style="background-color: rgb(88, 187, 187);color: black;
+          " type="button" [routerLink]="['/country']" >SEARCH</button>
+        </div>
+      
+      <!-- <div class="card" [hidden]="!showSearches">
+        <div class="search">
+          <div *ngFor="let country of searchedCountries; trackBy: trackById" tappable (click)="setCountryName(country)" class="search-result">
+              {{country}}
+          </div>     
+        </div>
+        <p class="search" *ngIf="searchedCountries && searchedCountries.length <= 0 && !isSearching">No Car found</p>
+        <p class="search" [hidden]="!isSearching">Searching cars...</p>
+        <app-autocomplete (setcarNameEvent)="setCarName($event)"></app-autocomplete>
+      </div> -->
+      
     </form>
     
   </div>
