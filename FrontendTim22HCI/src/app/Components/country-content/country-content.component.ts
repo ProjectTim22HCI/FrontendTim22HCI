@@ -36,7 +36,6 @@ export class CountryContentComponent implements OnInit{
     let firstCountry = localStorage.getItem('countryDetails');
     const input = document.getElementById('compare') as HTMLInputElement | null;
     const secondCountry = input?.value;
-    console.log(secondCountry);
     localStorage.setItem('firstCountry', firstCountry!);
     localStorage.setItem('secondCountry', secondCountry!);
     this.router.navigate(['comparison']);

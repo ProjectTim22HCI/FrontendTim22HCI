@@ -12,7 +12,7 @@
                 <div class="card w3-half" style="padding: 3%;">
                     <img class="card-img-top " src={{firstCountry.flag}}>
                     <div class="card-body">
-                        <h5 class="card-title">{{firstCountry.name}}</h5>
+                        <h2 class="card-title">{{firstCountry.name}}</h2>
                         <div class=" text-muted fs-4">Capital city: {{firstCountry.capital}}</div>
                         <div class=" text-muted fs-4">Independent: {{firstCountry.independent}}</div>
                         <div class=" text-muted fs-4">Population: {{firstCountry.population}}</div>
@@ -54,7 +54,7 @@
                 <div class="card w3-half" style="padding: 3%;">
                     <img class="card-img-top " src={{secondCountry.flag}}>
                     <div class="card-body">
-                        <h5 class="card-title">{{secondCountry.name}}</h5>
+                        <h2 class="card-title">{{secondCountry.name}}</h2>
                         <div class=" text-muted fs-4">Capital city: {{secondCountry.capital}}</div>
                         <div class=" text-muted fs-4">Independent: {{secondCountry.independent}}</div>
                         <div class=" text-muted fs-4">Population: {{secondCountry.population}}</div>
@@ -93,6 +93,17 @@
                     </div>
 
                 </div>
+
+                <div class="card mb-4">
+                    <div class="card-header" style="background-color: rgb(88, 187, 187); color: white;">Compare with another country</div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input id="compare" class="form-control" type="text" placeholder="Enter third country name..." aria-label="Enter third country name..." aria-describedby="button-search" />
+                            <button class="btn btn-primary" id="button-search" type="button" style="border-color: rgb(88, 187, 187); background-color: white;color: black;" (click)="compare()">Compare</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

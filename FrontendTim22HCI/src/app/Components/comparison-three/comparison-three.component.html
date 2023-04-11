@@ -5,21 +5,19 @@
 </header>
 <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom" style="padding: 3%;">
-        <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
+        <img class="card-img-top " src={{firstCountry.flag}}>
         <div class="card-body">
-            <h5 class="card-title">Country name</h5>
-            <div class=" text-muted fs-4">Capital : "Capital name"</div>
-            <div class=" text-muted fs-4">Independent : "No"</div>
-            <div class=" text-muted fs-4">Population : "Number"</div>
-            <div class=" text-muted fs-4">Map: <a href="#!" class="text-decoration-none">"Map URL"</a></div>
+            <h5 class="card-title">{{firstCountry.name}}</h5>
+            <div class=" text-muted fs-4">Capital city: {{firstCountry.capital}}</div>
+            <div class=" text-muted fs-4">Independent: {{firstCountry.independent}}</div>
+            <div class=" text-muted fs-4">Population: {{firstCountry.population}}</div>
+            <div class=" text-muted fs-4">Map: <a href={{firstCountry.map}} class="text-decoration-none">{{firstCountry.map}}</a></div>
 
             <div style="margin-top: 4vh;">
                 <div class="card-header">Continents</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Kontinent 1</li>
-                        <li>Kontinent 2</li>
-                        <li>Kontinent 3</li>
+                        <li *ngFor="let continent of firstCountry.continents">{{continent}}</li>
                     </ul>
                 </div>
             </div>
@@ -29,11 +27,7 @@
                 <div class="card-header">Languages</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Language 1</li>
-                        <li>Language 2</li>
-                        <li>Language 3</li>
-                        <li>Language 4</li>
-                        <li>Language 5</li>
+                        <li *ngFor="let language of firstCountry.languages">{{language}}</li>
                     </ul>
                 </div>
             </div>
@@ -43,31 +37,35 @@
                 <div class="card-header">Currencies</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Currency 1</li>
-                        <li>Currency 2</li>
-                        <li>Currency 3</li>
-                        <li>Currency 4</li>
+                        <li *ngFor="let currency of firstCountry.currencies">{{currency}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 4vh;">
+                <div class="card-header">Timezones</div>
+                <div class="card-body col-sm-6">
+                    <ul class="list-unstyled mb-0">
+                        <li *ngFor="let timezone of firstCountry.timezones">{{timezone}}</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom" style="padding: 3%;">
-        <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
+        <img class="card-img-top " src={{secondCountry.flag}}>
         <div class="card-body">
-            <h5 class="card-title">Country name</h5>
-            <div class=" text-muted fs-4">Capital : "Capital name"</div>
-            <div class=" text-muted fs-4">Independent : "No"</div>
-            <div class=" text-muted fs-4">Population : "Number"</div>
-            <div class=" text-muted fs-4">Map: <a href="#!" class="text-decoration-none">"Map URL"</a></div>
+            <h5 class="card-title">{{secondCountry.name}}</h5>
+            <div class=" text-muted fs-4">Capital city: {{secondCountry.capital}}</div>
+            <div class=" text-muted fs-4">Independent: {{secondCountry.independent}}</div>
+            <div class=" text-muted fs-4">Population: {{secondCountry.population}}</div>
+            <div class=" text-muted fs-4">Map: <a href={{secondCountry.map}} class="text-decoration-none">{{secondCountry.map}}</a></div>
 
             <div style="margin-top: 4vh;">
                 <div class="card-header">Continents</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Kontinent 1</li>
-                        <li>Kontinent 2</li>
-                        <li>Kontinent 3</li>
+                        <li *ngFor="let continent of secondCountry.continents">{{continent}}</li>
                     </ul>
                 </div>
             </div>
@@ -77,11 +75,7 @@
                 <div class="card-header">Languages</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Language 1</li>
-                        <li>Language 2</li>
-                        <li>Language 3</li>
-                        <li>Language 4</li>
-                        <li>Language 5</li>
+                        <li *ngFor="let language of secondCountry.languages">{{language}}</li>
                     </ul>
                 </div>
             </div>
@@ -91,31 +85,35 @@
                 <div class="card-header">Currencies</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Currency 1</li>
-                        <li>Currency 2</li>
-                        <li>Currency 3</li>
-                        <li>Currency 4</li>
+                        <li *ngFor="let currency of secondCountry.currencies">{{currency}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 4vh;">
+                <div class="card-header">Timezones</div>
+                <div class="card-body col-sm-6">
+                    <ul class="list-unstyled mb-0">
+                        <li *ngFor="let timezone of secondCountry.timezones">{{timezone}}</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom" style="padding: 3%;">
-        <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
+        <img class="card-img-top " src={{thirdCountry.flag}}>
         <div class="card-body">
-            <h5 class="card-title">Country name</h5>
-            <div class=" text-muted fs-4">Capital : "Capital name"</div>
-            <div class=" text-muted fs-4">Independent : "No"</div>
-            <div class=" text-muted fs-4">Population : "Number"</div>
-            <div class=" text-muted fs-4">Map: <a href="#!" class="text-decoration-none">"Map URL"</a></div>
+            <h5 class="card-title">{{thirdCountry.name}}</h5>
+            <div class=" text-muted fs-4">Capital city: {{thirdCountry.capital}}</div>
+            <div class=" text-muted fs-4">Independent: {{thirdCountry.independent}}</div>
+            <div class=" text-muted fs-4">Population: {{thirdCountry.population}}</div>
+            <div class=" text-muted fs-4">Map: <a href={{thirdCountry.map}} class="text-decoration-none">{{thirdCountry.map}}</a></div>
 
             <div style="margin-top: 4vh;">
                 <div class="card-header">Continents</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Kontinent 1</li>
-                        <li>Kontinent 2</li>
-                        <li>Kontinent 3</li>
+                        <li *ngFor="let continent of thirdCountry.continents">{{continent}}</li>
                     </ul>
                 </div>
             </div>
@@ -125,11 +123,7 @@
                 <div class="card-header">Languages</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Language 1</li>
-                        <li>Language 2</li>
-                        <li>Language 3</li>
-                        <li>Language 4</li>
-                        <li>Language 5</li>
+                        <li *ngFor="let language of thirdCountry.languages">{{language}}</li>
                     </ul>
                 </div>
             </div>
@@ -139,10 +133,16 @@
                 <div class="card-header">Currencies</div>
                 <div class="card-body col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li>Currency 1</li>
-                        <li>Currency 2</li>
-                        <li>Currency 3</li>
-                        <li>Currency 4</li>
+                        <li *ngFor="let currency of thirdCountry.currencies">{{currency}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 4vh;">
+                <div class="card-header">Timezones</div>
+                <div class="card-body col-sm-6">
+                    <ul class="list-unstyled mb-0">
+                        <li *ngFor="let timezone of thirdCountry.timezones">{{timezone}}</li>
                     </ul>
                 </div>
             </div>
