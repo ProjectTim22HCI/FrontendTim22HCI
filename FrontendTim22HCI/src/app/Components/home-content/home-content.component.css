@@ -6,6 +6,12 @@ html {
     -webkit-text-size-adjust: 100%;
     /* 2 */
   }
+
+  header{
+    background: url("../../../assets/background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+}
   
   /* Sections
      ========================================================================== */
@@ -14,6 +20,7 @@ html {
    */
   body {
     margin: 0;
+
   }
   
   /**
@@ -826,7 +833,7 @@ html {
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 40%;
-    padding: 15px;
+    padding: 15px; 
   }
   
   .s130 form {
@@ -977,6 +984,10 @@ html {
     .s130 form .inner-form .input-field.second-wrap .btn-search {
       font-size: 13px;
     }
+
+    #itemTemplate let-item {
+      position: fixed !important;
+  }
   }
   
   /*# sourceMappingURL=Searchs_130.css.map */

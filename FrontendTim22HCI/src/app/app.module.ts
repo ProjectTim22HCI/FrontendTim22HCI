@@ -5,24 +5,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HomeContentComponent } from './Components/home-content/home-content.component';
-import { CountryHeaderComponent } from './Components/country-header/country-header.component';
 import { CountryContentComponent } from './Components/country-content/country-content.component';
 import { CountriesContentComponent } from './Components/countries-content/countries-content.component';
-import { CountriesHeaderComponent } from './Components/countries-header/countries-header.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { ComparisonComponent } from './Components/comparison/comparison.component';
+import { ComparisonThreeComponent } from './Components/comparison-three/comparison-three.component';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+
+const appRoute: Routes = [
+  {path: 'Home', component: HomeContentComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeContentComponent,
-    CountryHeaderComponent,
     CountryContentComponent,
     CountriesContentComponent,
-    CountriesHeaderComponent
+    ComparisonComponent,
+    ComparisonThreeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoute),
+    HttpClientModule,
+    AutocompleteLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

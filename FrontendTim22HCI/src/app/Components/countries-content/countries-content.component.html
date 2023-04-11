@@ -1,44 +1,54 @@
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+<header class="py-5 bg-light border-bottom mb-4">
+    
+    <div class="container" >
+        <div class="text-center my-5"  style="background-color: rgb(255, 255, 255, 0.9);">
+            <h1 class="fw-bolder" style="font-family: 'Gaegu', cursive; ">Search after country</h1>
+            <p class="lead mb-0">and get to know the countries of the world!</p>
+        </div>
+        
+        <div class="input-group mb-0 w-50 mx-auto" >
+            <div class="ng-autocomplete">
+                <ng-autocomplete
+                  [data]="countries"
+                  [searchKeyword]="keyword"
+                  placeholder="Enter the Country Name"
+                  (selected)='selectEvent($event)'
+                  (inputChanged)='onChangeSearch($event)'
+                  (inputFocused)='onFocused($event)'
+                  historyIdentifier="countries"
+                  [itemTemplate]="itemTemplate"
+                  [notFoundTemplate]="notFoundTemplate">
+                </ng-autocomplete>
+              
+                <ng-template #itemTemplate let-item>
+                  <a [innerHTML]="item.name"></a>
+                </ng-template>
+              
+                <ng-template #notFoundTemplate let-notFound>
+                  <div [innerHTML]="notFound"></div>
+                </ng-template>
+              </div>
 
-<div class="container" >
-    <div class="row">
-        <div class="col-4">
-            <div class="card " style="width:25rem;">
-                <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
+          </div>
+    </div>
+</header>
+<div class="container " >
+    <div class="row ">
+        <div class="col-4 w3-third" *ngFor="let country of countries" id="demo">
+            <div class="card mb-5" style="width:25rem;" (click)="chooseCountry(country.name)">
+                <img class="card-img-top" style="height:20rem;" src={{country.flag}}>
                 <div class="card-body">
-                    <h5 class="card-title">Country</h5>
-                    <p class="card-text">Capital: </p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">View more</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card " style="width:25rem;">
-                <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Country</h5>
-                    <p class="card-text">Capital: </p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">View more</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card " style="width:25rem;">
-                <img class="card-img-top " src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Country</h5>
-                    <p class="card-text">Capital: </p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">View more</a>
+                    <h2 class="card-title" class="fw-bolder" style="font-family: 'Gaegu', cursive; ">{{country.name}}</h2>
+                    <p class="card-text">Capital city: {{country.capital}}</p>
+                    <p class="card-text">Population: {{country.population}}</p>
+                    <p class="card-text">Continent: {{country.continents}}</p>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <nav aria-label="Pagination">
-        <ul class="pagination justify-content-center my-4">
-            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-            <li class="page-item"><a class="page-link" href="#!">2</a></li>
-            <li class="page-item"><a class="page-link" href="#!">3</a></li>
-            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-            <li class="page-item"><a class="page-link" href="#!">15</a></li>
-        </ul>
-    </nav>
 </div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CountryHeaderComponent } from './country-header.component';
+import { ComparisonComponent } from './comparison.component';
 
-describe('CountryHeaderComponent', () => {
-  let component: CountryHeaderComponent;
-  let fixture: ComponentFixture<CountryHeaderComponent>;
+describe('ComparisonComponent', () => {
+  let component: ComparisonComponent;
+  let fixture: ComponentFixture<ComparisonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CountryHeaderComponent ]
+      declarations: [ ComparisonComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CountryHeaderComponent);
+    fixture = TestBed.createComponent(ComparisonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

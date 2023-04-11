@@ -1,0 +1,30 @@
+header{
+    background: url("../../../assets/background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+.btn-sm{
+  color: rgb(88, 187, 187);
+  border-color: rgb(88, 187, 187);
+}
+
+.page-link{
+  color:rgb(88, 187, 187);
+}
+
+.card-title{
+  font-family: 'Gaegu', cursive;
+}
+
+.list-unstyled{
+  color: gray;
+}
+
+.card-img-top{
+  transition: all .2s ease-in-out; 
+}
+
+.card-img-top:hover{
+  transform: scale(1.1);
+}
