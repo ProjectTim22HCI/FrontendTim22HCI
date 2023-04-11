@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ComparisonComponent } from './Components/comparison/comparison.component';
 import { ComparisonThreeComponent } from './Components/comparison-three/comparison-three.component';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 const appRoute: Routes = [
   {path: 'Home', component: HomeContentComponent}
@@ -30,7 +31,8 @@ const appRoute: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoute),
-    HttpClientModule
+    HttpClientModule,
+    AutocompleteLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

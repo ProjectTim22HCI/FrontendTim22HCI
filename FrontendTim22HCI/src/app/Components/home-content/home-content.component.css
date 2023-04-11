@@ -833,7 +833,7 @@ html {
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 40%;
-    padding: 15px;
+    padding: 15px; 
   }
   
   .s130 form {
@@ -984,6 +984,10 @@ html {
     .s130 form .inner-form .input-field.second-wrap .btn-search {
       font-size: 13px;
     }
+
+    #itemTemplate let-item {
+      position: fixed !important;
+  }
   }
   
   /*# sourceMappingURL=Searchs_130.css.map */
